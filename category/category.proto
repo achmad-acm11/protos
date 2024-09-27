@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package category;
 
-option go_package = "./protobuf";
+option go_package = "category/";
 
 message Category {
   int32 Id = 1;
