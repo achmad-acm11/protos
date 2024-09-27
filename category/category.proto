@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package category;
+
+option go_package = "./protobuf";
+
+message Category {
+  int32 Id = 1;
+  string Name = 2;
+}
+
+message GetCategoryRequest {
+  int32 Id = 1;
+}
+
+service CategoryService {
+  rpc GetCategory(GetCategoryRequest) returns (Category) {}
+}
