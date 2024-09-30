@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package author;
+
+option go_package = "author/";
+
+message Author {
+  int32 Id = 1;
+  string Name = 2;
+}
+
+message GetAuthorRequest {
+  int32 Id = 1;
+}
+
+service AuthorService {
+  rpc GetAuthor(GetAuthorRequest) returns (Author) {}
+}
